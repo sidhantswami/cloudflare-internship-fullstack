@@ -54,11 +54,11 @@ async function handleRequest(request) {
 	// console.log("bp2");
 
 	return  new HTMLRewriter().on('a', new elementRewriter('href'))
-  							            .on('title',new elementRewriter('title',whichVariant))
-  							            .on('h1',new elementRewriter('h1',whichVariant))
-										.on('p',new elementRewriter('p',whichVariant))
-										.on('a', new elementRewriter('a'))
-                            .transform(finalResponse)
+  							  .on('title',new elementRewriter('title',whichVariant))
+  						      .on('h1',new elementRewriter('h1',whichVariant))
+							  .on('p',new elementRewriter('p',whichVariant))
+							  .on('a', new elementRewriter('a'))
+                              .transform(finalResponse)
 
 }
 
